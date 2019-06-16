@@ -2,11 +2,7 @@ import * as admin from 'firebase-admin';
 
 export const typeDef = `
   extend type Query {
-    answers: [EightBallAnswer]
-  }
-  type EightBallAnswer {
-    weight: Int
-    content: String
+    answers: [WeightedString]
   }
 `;
 

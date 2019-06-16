@@ -1,3 +1,4 @@
+import { typeDef as commonDefs } from './common';
 import { typeDef as botDefs, resolvers as botReplyResolvers } from './botReply';
 import { typeDef as eightBallDefs, resolvers as eightBallAnswerResolvers } from './eightBallAnswer';
 import { typeDef as linkDefs, resolvers as linkResolvers } from './links';
@@ -21,7 +22,7 @@ const resolvers = {
 };
 
 export const schema = makeExecutableSchema({
-  typeDefs: [baseDef, botDefs, eightBallDefs, linkDefs, pastaDefs, reminderDefs, raidDefs],
+  typeDefs: [baseDef, commonDefs, botDefs, eightBallDefs, linkDefs, pastaDefs, reminderDefs, raidDefs],
   resolvers: merge(
     resolvers,
     botReplyResolvers,

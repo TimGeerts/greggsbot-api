@@ -13,9 +13,6 @@ export const typeDef = `
   extend type Query {
     reminders: [Reminder]
   }
-  extend type Mutation {
-    setReminder(reminder: String!): String
-  }
 `;
 
 export const resolvers = {
@@ -27,11 +24,5 @@ export const resolvers = {
         .once('value')
         .then((snap) => snap.val())
         .then((val) => Object.keys(val).map((key) => val[key]))
-  },
-  Mutation: {
-    setReminder: (_: any, args: any) => {
-      console.log(args);
-      return 'great success';
-    }
   }
 };

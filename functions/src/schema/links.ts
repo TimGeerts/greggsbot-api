@@ -2,11 +2,7 @@ import * as admin from 'firebase-admin';
 
 export const typeDef = `
   extend type Query {
-    links: [Link]
-  }
-  type Link {
-    content: String
-    tags: [String]
+    links: [TaggedString]
   }
 `;
 
