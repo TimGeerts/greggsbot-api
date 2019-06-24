@@ -2,7 +2,12 @@ import * as admin from 'firebase-admin';
 
 export const typeDef = `
   extend type Query {
-    pastas: [TaggedString]
+    pastas: [Pasta]
+  }
+  type Pasta {
+    tags: [String]
+    content: String
+    month: Int
   }
 `;
 
